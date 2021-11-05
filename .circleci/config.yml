@@ -3,9 +3,22 @@ version: 2.1
 orbs:
   node: circleci/node@4.7
 
+jobs:
+  test:
+    executor:
+      name: node/default
+      tag: '16.13'
+    steps:
+      - checkout
+      - node/install-packages
+      - run:
+          command: npm run test
+          environment:
+            JEST_JUNIT_OUTPUT_DIR: ./reports/junit/
+      - store_test_results:
+          path: ./reports/junit/
+
 workflows:
-  sample:
+  test:
     jobs:
-      - node/test:
-          version: '16.13'
-          pkg-manager: npm
+      - test
