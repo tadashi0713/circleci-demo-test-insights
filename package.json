@@ -1,0 +1,26 @@
+{
+  "name": "circleci-demo-test-insights",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tadashi0713/circleci-demo-test-insights.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tadashi0713/circleci-demo-test-insights/issues"
+  },
+  "homepage": "https://github.com/tadashi0713/circleci-demo-test-insights#readme",
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "jest": "^27.3.1",
+    "ts-jest": "^27.0.7",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  }
+}
