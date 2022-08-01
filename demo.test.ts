@@ -13,6 +13,14 @@ describe('Test Insights Demo', () => {
     }
   })
 
+  it('70% Success', () => {
+    if(Math.random() < 0.7) {
+      expect(true).toEqual(true)
+    } else {
+      expect(false).toEqual(true)
+    }
+  })
+
   it('Takes 1 min', async () => {
     await sleep(60000)
     expect(true).toEqual(true)
