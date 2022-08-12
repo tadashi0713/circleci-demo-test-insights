@@ -25,6 +25,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Get project slug
+          command: echo 'export PROJECT_SLUG=$(echo $CIRCLE_BUILD_URL | sed -e "s|https://circleci.com/||g" -e "s|/[0-9]*||g")' >> $BASH_ENV
+      - run:
           name: Install datediff command
           command: |
             wget https://bitbucket.org/hroptatyr/dateutils/downloads/dateutils-0.4.10.tar.xz
@@ -35,6 +38,7 @@ jobs:
       - run:
           name: Collect flaky tests & generate slack template
           command: |
+            echo $PROJECT_SLUG
             # Fetch flaky tests API(https://circleci.com/docs/api/v2/index.html#operation/getFlakyTests)
             res=$(curl --request GET \
             --url "https://circleci.com/api/v2/insights/gh/tadashi0713/circleci-demo-test-insights/flaky-tests" \
