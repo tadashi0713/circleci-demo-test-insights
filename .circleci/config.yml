@@ -54,7 +54,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": ":warning: Flaky tests detected to *${flaky_tests_count}* project."
+                    "text": ":warning: Flaky tests detected to *${CIRCLE_PROJECT_REPONAME}* project."
                   }
                 }
               ]
