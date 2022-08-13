@@ -128,8 +128,8 @@ jobs:
                     }
                   ]
                 }
-              EOS
-              )
+            EOS
+            )
 
                 template=$(echo $template | jq ".blocks |= . + [$flaky_test_template]")
               done
