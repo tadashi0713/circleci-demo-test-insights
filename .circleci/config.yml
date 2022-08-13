@@ -4,6 +4,11 @@ orbs:
   node: circleci/node@4.7.0
   slack: circleci/slack@4.10.1
 
+parameters:
+  notify_flaky_tests:
+    type: boolean
+    default: false
+
 jobs:
   test:
     executor:
@@ -166,4 +171,8 @@ workflows:
   test:
     jobs:
       - test
+
+  notify_flaky_tests:
+    when: << pipeline.parameters.notify_flaky_tests >>
+    jobs:
       - flaky_tests_slack
