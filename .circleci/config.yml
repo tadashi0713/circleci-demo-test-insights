@@ -46,7 +46,7 @@ jobs:
 
             # Skip if flaky tests don't exist
             flaky_tests_count=$(echo $res | jq '.total_flaky_tests')
-            if [ $flaky_tests_count != 0 ]; then
+            if [ $flaky_tests_count != '0' ]; then
               echo "Flaky tests not found!"
               circleci-agent step halt
             fi
