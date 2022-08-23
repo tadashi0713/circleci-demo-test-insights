@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   node: circleci/node@4.7.0
-  flaky-tests-notify: tadashi0713/flaky-tests-notify@dev:alpha
+  flaky-tests-notify: tadashi0713/flaky-tests-notify@1.0.0
 
 parameters:
   notify_flaky_tests:
