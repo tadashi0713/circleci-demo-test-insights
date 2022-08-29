@@ -5,16 +5,24 @@ describe('Test Insights Demo', () => {
     expect(true).toEqual(true)
   })
 
-  it('50% Success', () => {
-    if(Math.random() < 0.5) {
+  it('60% Success', () => {
+    if(Math.random() < 0.6) {
       expect(true).toEqual(true)
     } else {
       expect(false).toEqual(true)
     }
   })
 
-  it('70% Success', () => {
-    if(Math.random() < 0.7) {
+  it('40% Success', () => {
+    if(Math.random() < 0.4) {
+      expect(true).toEqual(true)
+    } else {
+      expect(false).toEqual(true)
+    }
+  })
+
+  it('20% Success', () => {
+    if(Math.random() < 0.2) {
       expect(true).toEqual(true)
     } else {
       expect(false).toEqual(true)
